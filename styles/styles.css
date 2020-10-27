@@ -262,7 +262,23 @@
     margin-bottom: var(--mb-6);
 }
 
+/* buttons */ 
 
 
+.button {
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 1.125rem 2rem;
+    font-weight: var(--font-medium);
+    border-radius: .5rem;
+    transition: .3s;
+}
 
+.button:hover {
+    transform: translateY(-.25rem)
+}
+
+
+/* Featured */ 
 
