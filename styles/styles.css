@@ -337,7 +337,7 @@
 
     font-size: var(--h2-font-size);
     letter-spacing: .1rem;
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-bold);
 }
 
 .watches__name {
@@ -350,6 +350,21 @@
 
 .watches:hover{
     transform: translateY(-.5rem)
+}
+
+.watches__pages {
+    margin-top: var(--mb-6);
+}
+
+.watches__pag {
+    padding: .5rem 1rem;
+    border: 1px solid var(--dark-color);
+}
+
+.watches__pag:hover {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+
 }
 
 
@@ -402,9 +417,10 @@
 
 .new__container{
     row-gap: 2rem;
+
 }
 
-.new__mens{
+.new__watches{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -413,7 +429,7 @@
     padding: 2rem;
 }
 
-.new__mens-img{
+.new__watches-img{
     width: 276px;
     margin-bottom: var(--mb-3);
 }
@@ -429,7 +445,7 @@
     margin-bottom: var(--mb-3);
 }
 
-.new__watches{
+.new__watchess{
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -442,7 +458,7 @@
     padding: 3.5rem 1.5rem;
     background-color: var(--dark-color-lighten);
     border-radius: .5rem;
-    overflow:hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
 
@@ -469,6 +485,18 @@
     bottom: 0;
 }
 
+
+/* women watch */
+
+.women__container {
+    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+}
+
+
+
+
 /* offer */
 
 .offer__container{
@@ -486,39 +514,121 @@
     margin-bottom: .25rem;
 }
 
+.offer__description{
+    margin-bottom: var(--mb-3);
+}
+
 .offer__img {
     width: 153px;
 }
 
 
+/* news letters */
+
+.newsletter__container {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 2rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.newsletter__title {
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb2);
+ }
+
+ .newsletter__description {
+     margin-bottom: var(--mb-5);
+ }
+
+ .newsletter__subscribe {
+     display: flex;
+     column-gap: .5rem;
+     background-color: var(--white-color);
+     padding: .5rem;
+     border-radius: .5rem;
+ }
+
+ .newsletter__input{
+     outline: none;
+     border: none;
+     width: 90%
+     font-size: var(--normal-font-size);
+
+ }
+
+ .newsletter__input::placeholder {
+     color: var(--dark--color);
+     font-family: var(--body-font);
+     font-size: var(--normal-font-size);
+     font-weight: var(--font-semi-bold);
+
+ }
 
 
+/* footer */
 
+.footer__container {
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+}
 
+.footer__box {
+    margin-bottom: var(--mb-4);
+}
 
+.footer__title {
+    font-size: var(--big-font-size);
+}
 
+.footer__link {
 
+    display: block;
+    width: max-content;
+    margin-bottom: var(--mb-1);
 
+}
 
+.footer__social{
 
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer__copy{
+    padding-top: 3rem;
+    font-size: var(--smaller-font-size);
+    color: var(--dark-color-light);
+    text-align: center;
+}
 
 
 /*media queries */
+
+@media screen and (min-width: 576px){
+    .collection__container{
+        grid-template-columns: 415px;
+    }
+
+    .collection__img{
+        width: 190px;
+    }
+
+    .offer__container{
+        grid-template-columns: max-content max-content;
+    }
+
+    .offer__data{
+        text-align: center;
+    }
+
+    .new__watches{
+        align-items: center;
+    }
+}
+
+
+
 
 @media screen and (min-width: 768px) {
     body {
@@ -526,7 +636,7 @@
     }
 
     .section {
-        padding: 7rem 0;
+        padding: 7rem 0 3rem;
 
     }
 
@@ -577,6 +687,27 @@
         left: -3rem;
     }
 
+    .newsletter__container{
+        grid-template-columns: max-content max-content;
+        justify-content: center;
+        align-items: center;
+        padding: 4.5rem 2rem;
+        column-gap: 3rem;
 
+    }
 
+    .newsletter__description{
+        margin-bottom: 0;
+    }
+
+    .newsletter__subscribe {
+
+        width: 360px;
+        height: max-content;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    
 }
